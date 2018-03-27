@@ -26,8 +26,12 @@ public class ObjectFactory {
 
     private final static QName _ValidarAgendaResponse_QNAME = new QName("http://agendaSoap/", "validarAgendaResponse");
     private final static QName _Agenda_QNAME = new QName("http://agendaSoap/", "Agenda");
+    private final static QName _InsertarPersona_QNAME = new QName("http://agendaSoap/", "insertarPersona");
+    private final static QName _InsertarPersonaResponse_QNAME = new QName("http://agendaSoap/", "insertarPersonaResponse");
+    private final static QName _DevolverPersona_QNAME = new QName("http://agendaSoap/", "devolverPersona");
     private final static QName _ValidarAgenda_QNAME = new QName("http://agendaSoap/", "validarAgenda");
     private final static QName _Persona_QNAME = new QName("http://agendaSoap/", "Persona");
+    private final static QName _DevolverPersonaResponse_QNAME = new QName("http://agendaSoap/", "devolverPersonaResponse");
     private final static QName _DevolverAgendaResponse_QNAME = new QName("http://agendaSoap/", "devolverAgendaResponse");
     private final static QName _DevolverAgenda_QNAME = new QName("http://agendaSoap/", "devolverAgenda");
 
@@ -52,6 +56,14 @@ public class ObjectFactory {
      */
     public Persona createPersona() {
         return new Persona();
+    }
+
+    /**
+     * Create an instance of {@link DevolverPersonaResponse }
+     * 
+     */
+    public DevolverPersonaResponse createDevolverPersonaResponse() {
+        return new DevolverPersonaResponse();
     }
 
     /**
@@ -87,6 +99,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link InsertarPersona }
+     * 
+     */
+    public InsertarPersona createInsertarPersona() {
+        return new InsertarPersona();
+    }
+
+    /**
+     * Create an instance of {@link InsertarPersonaResponse }
+     * 
+     */
+    public InsertarPersonaResponse createInsertarPersonaResponse() {
+        return new InsertarPersonaResponse();
+    }
+
+    /**
+     * Create an instance of {@link DevolverPersona }
+     * 
+     */
+    public DevolverPersona createDevolverPersona() {
+        return new DevolverPersona();
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ValidarAgendaResponse }{@code >}}
      * 
      */
@@ -105,6 +141,33 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InsertarPersona }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://agendaSoap/", name = "insertarPersona")
+    public JAXBElement<InsertarPersona> createInsertarPersona(InsertarPersona value) {
+        return new JAXBElement<InsertarPersona>(_InsertarPersona_QNAME, InsertarPersona.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InsertarPersonaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://agendaSoap/", name = "insertarPersonaResponse")
+    public JAXBElement<InsertarPersonaResponse> createInsertarPersonaResponse(InsertarPersonaResponse value) {
+        return new JAXBElement<InsertarPersonaResponse>(_InsertarPersonaResponse_QNAME, InsertarPersonaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DevolverPersona }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://agendaSoap/", name = "devolverPersona")
+    public JAXBElement<DevolverPersona> createDevolverPersona(DevolverPersona value) {
+        return new JAXBElement<DevolverPersona>(_DevolverPersona_QNAME, DevolverPersona.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ValidarAgenda }{@code >}}
      * 
      */
@@ -120,6 +183,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://agendaSoap/", name = "Persona")
     public JAXBElement<Persona> createPersona(Persona value) {
         return new JAXBElement<Persona>(_Persona_QNAME, Persona.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DevolverPersonaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://agendaSoap/", name = "devolverPersonaResponse")
+    public JAXBElement<DevolverPersonaResponse> createDevolverPersonaResponse(DevolverPersonaResponse value) {
+        return new JAXBElement<DevolverPersonaResponse>(_DevolverPersonaResponse_QNAME, DevolverPersonaResponse.class, null, value);
     }
 
     /**
