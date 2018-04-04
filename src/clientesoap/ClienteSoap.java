@@ -5,7 +5,9 @@
  */
 package clientesoap;
 
+import agendasoap.Agenda;
 import agendasoap.Agenda_Service;
+import java.io.File;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -101,8 +103,11 @@ public class ClienteSoap {
     }
 
     private static void validar() {
-        agendasoap.Agenda ag = service.getValidarPort().devolverAgenda();
-        boolean b = service.getValidarPort().validarAgenda(ag);
+        System.out.println("Introduce el nombre de la agenda:");
+        String nombreAgenda = scanner.next();
+        File f = new File(nombreAgenda);
+        //agendasoap.Agenda ag = service.getValidarPort().devolverAgenda();
+        boolean b = service.getValidarPort().validarAgenda(f.toString());
         System.out.println(b);
     }
 

@@ -61,7 +61,7 @@ public interface Validar {
     @Action(input = "http://agendaSoap/Validar/validarAgendaRequest", output = "http://agendaSoap/Validar/validarAgendaResponse")
     public boolean validarAgenda(
         @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
+        Agenda arg0);
 
     /**
      * 
